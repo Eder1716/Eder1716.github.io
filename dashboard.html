@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Gestión de Salones</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Font Awesome para íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="top-bar">
+            <div class="logo-container">
+<img src="Imagenes/LogoUnimag.png" alt="Logo Unimagdalena" class="logo">
+                <h1 class="title">Gestión de Salones y Auditorios Unimagdalena</h1>
+            </div>
+        </header>
+
+        <main class="dashboard-box">
+            <div class="user-welcome">
+                <h2>Bienvenido al Sistema de Gestión de Salones, <span id="nombre-usuario">Estudiante</span></h2>
+                <div class="user-info">
+                    <span>Código: <strong id="codigo-usuario">2020114001</strong></span>
+                    <button class="logout-btn" id="cerrar-sesion"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</button>
+                </div>
+            </div>
+            
+            <div class="info-section">
+                <div class="info-icon">
+                    <i class="fas fa-info-circle"></i>
+                </div>
+                <div class="info-content">
+                    <p>Antes de solicitar un salón, por favor ten en cuenta las siguientes condiciones de uso:</p>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> El solicitante es responsable del estado del salón.</li>
+                        <li><i class="fas fa-check-circle"></i> El uso debe cumplir con los reglamentos de la universidad.</li>
+                        <li><i class="fas fa-check-circle"></i> Los horarios deben respetarse estrictamente.</li>
+                        <li><i class="fas fa-check-circle"></i> Cualquier daño debe ser reportado de inmediato.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="action-buttons">
+                <button class="btn primary-btn" id="solicitar-salon">
+                    <i class="fas fa-calendar-plus"></i> Solicitar Salón
+                </button>
+                <button class="btn secondary-btn" id="mis-solicitudes">
+                    <i class="fas fa-history"></i> Mis Solicitudes
+                </button>
+                <button class="btn secondary-btn" id="disponibilidad">
+                    <i class="fas fa-calendar-alt"></i> Ver Disponibilidad
+                </button>
+            </div>
+        </main>
+
+        <footer class="bottom-bar">
+            <div class="footer-content">
+                <p>&copy; 2025 Universidad del Magdalena</p>
+                <div class="footer-links">
+                    <a href="#" class="privacy-policy">Política de privacidad</a>
+                    <a href="#">Términos de uso</a>
+                    <a href="#">Contacto</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
