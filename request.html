@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitud de Salón | Unimagdalena</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Font Awesome para íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="top-bar">
+            <div class="logo-container">
+<img src="Imagenes/LogoUnimag.png" alt="Logo Unimagdalena" class="logo">
+                <h1 class="title">Gestión de Salones y Auditorios Unimagdalena</h1>
+            </div>
+        </header>
+
+        <main class="request-form-container">
+            <div class="form-header">
+                <h2><i class="fas fa-calendar-plus"></i> Formulario de Solicitud</h2>
+                <p class="form-description">Complete todos los campos para solicitar el uso de un salón o auditorio.</p>
+            </div>
+            
+            <form id="request-form" class="request-form">
+                <div class="form-section">
+                    <h3>Datos del Solicitante</h3>
+                    
+                    <div class="form-group">
+                        <label for="nombre">Nombre Completo:</label>
+                        <div class="input-with-icon">
+                            <i class="fas fa-user input-icon"></i>
+                            <input type="text" id="nombre" placeholder="Ingrese su nombre completo" class="input-field" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="codigo">Código Estudiantil:</label>
+                        <div class="input-with-icon">
+                            <i class="fas fa-id-card input-icon"></i>
+                            <input type="text" id="codigo" placeholder="Ingrese su código" class="input-field" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico:</label>
+                        <div class="input-with-icon">
+                            <i class="fas fa-envelope input-icon"></i>
+                            <input type="email" id="email" placeholder="Ingrese su correo institucional" class="input-field" required>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-section">
+                    <h3>Detalles de la Solicitud</h3>
+                    
+                    <div class="form-group">
+                        <label for="espacio">Tipo de Espacio:</label>
+                        <div class="select-with-icon">
+                            <i class="fas fa-building input-icon"></i>
+                            <select id="espacio" class="select-field" required>
+                                <option value="">Seleccione un tipo de espacio</option>
+                                <option value="salon">Salón de Clases</option>
+                                <option value="auditorio">Auditorio</option>
+                                <option value="laboratorio">Laboratorio</option>
+                                <option value="sala">Sala de Conferencias</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="fecha">Fecha de Uso:</label>
+                        <div class="input-with-icon">
+                            <i class="fas fa-calendar-alt input-icon"></i>
+                            <input type="date" id="fecha" class="input-field" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="horario">Horario:</label>
+                        <div class="select-with-icon">
+                            <i class="fas fa-clock input-icon"></i>
+                            <select id="horario" class="select-field" required>
+                                <option value="">Seleccione un horario</option>
+                                <option value="8-10">8:00 AM - 10:00 AM</option>
+                                <option value="10-12">10:00 AM - 12:00 PM</option>
+                                <option value="12-14">12:00 PM - 2:00 PM</option>
+                                <option value="14-16">2:00 PM - 4:00 PM</option>
+                                <option value="16-18">4:00 PM - 6:00 PM</option>
+                                <option value="18-20">6:00 PM - 8:00 PM</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-section">
+                    <h3>Propósito y Detalles Adicionales</h3>
+                    
+                    <div class="form-group">
+                        <label for="motivo">Motivo de la Solicitud:</label>
+                        <div class="select-with-icon">
+                            <i class="fas fa-tasks input-icon"></i>
+                            <select id="motivo" class="select-field" required>
+                                <option value="">Seleccione un motivo</option>
+                                <option value="academico">Actividad Académica</option>
+                                <option value="evento">Evento Estudiantil</option>
+                                <option value="reunion">Reunión de Grupo</option>
+                                <option value="exposicion">Exposición o Presentación</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="participantes">Número de Participantes:</label>
+                        <div class="input-with-icon">
+                            <i class="fas fa-users input-icon"></i>
+                            <input type="number" id="participantes" min="1" max="200" placeholder="Cantidad de personas" class="input-field" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="detalles">Detalles Adicionales:</label>
+                        <textarea id="detalles" rows="3" placeholder="Describa brevemente el propósito de su solicitud y cualquier requerimiento especial" class="textarea-field"></textarea>
+                    </div>
+                    
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="terminos" required>
+                        <label for="terminos">Acepto los <a href="#">términos y condiciones</a> para el uso de los espacios universitarios</label>
+                    </div>
+                </div>
+                
+                <div class="button-group">
+                    <button type="button" class="btn secondary-btn" id="btn-cancelar">
+                        <i class="fas fa-times"></i> Cancelar
+                    </button>
+                    <button type="submit" class="btn primary-btn" id="btn-enviar">
+                        <i class="fas fa-paper-plane"></i> Enviar Solicitud
+                    </button>
+                </div>
+            </form>
+        </main>
+
+        <footer class="bottom-bar">
+            <div class="footer-content">
+                <p>&copy; 2025 Universidad del Magdalena</p>
+                <div class="footer-links">
+                    <a href="#" class="privacy-policy">Política de privacidad</a>
+                    <a href="#">Términos de uso</a>
+                    <a href="#">Contacto</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+</div>
+
+<!-- Agregamos la biblioteca de EmailJS -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script src="js/request.js"></script>
+</body>
+</html>
+</body>
+</html>
